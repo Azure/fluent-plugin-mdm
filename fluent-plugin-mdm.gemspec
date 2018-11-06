@@ -4,8 +4,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name    = "fluent-plugin-mdm"
   spec.version = "0.1.0"
-  spec.authors = ["Jorge Villaseñor"]
-  spec.email   = ["jovillas@microsoft.com"]
+  spec.authors = ["HANA RP Devs"]
+  spec.email   = ["hanarpdevs@microsoft.com"]
 
   spec.description   = "An output plugin to send metrics to MDM using the statsd interface"
   spec.summary       = spec.description
