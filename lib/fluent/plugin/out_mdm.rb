@@ -58,9 +58,9 @@ module Fluent
         begin
           @socket.send(metric, 0, @host, @port)
         rescue Errno::ECONNREFUSED => error
-          log.warn "Error connecting to #{@host}: #{error}"
+          log.warn "Error connecting to #{@host} while sending the record \"#{record}\": #{error}"
         rescue => error
-          log.error "Unhandled error trying to send MDM message"
+          log.error "Unhandled error trying to send MDM message: \"#{record}\""
         end
       }
     end
