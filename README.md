@@ -2,7 +2,6 @@ MDM Out Plugin
 ======
 
 ## Installation
-
      gem install fluent-plugin-mdm
 
 ## Configuration
