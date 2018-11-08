@@ -1,3 +1,28 @@
+MDM Out Plugin
+======
+
+## Installation
+     gem install fluent-plugin-mdm
+
+## Configuration
+* `host` - MDM's statsd frontend endpoint. String, default: '0.0.0.0'
+* `port` - MDM's statsd frontend port. Integer, default '8125'
+
+### Sample configuration
+```
+<match heartbeat.mdm.**>
+  @type mdm
+  host 172.17.0.1
+  port 8125
+</match>
+```
+
+## Usage
+This plugin expects the following fields to be present on the record
+* `Namespace` - Metric grouping for this event.
+* `Metric` - Actual metric name for which this event is being emitted.
+* `Dims` - Map of the dimension describing this metric.
+* `Value` - Metric value to be emitted.
 
 # Contributing
 
